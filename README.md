@@ -39,7 +39,7 @@ The server will start on `http://localhost:8000`
 
 ---
 
-## 🔐 Authentication Routes
+##  Authentication Routes
 
 ### POST `/auth/signup`
 
