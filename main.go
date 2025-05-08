@@ -18,7 +18,7 @@ func main() {
 		c.JSON(200, gin.H{"message": "PONG"})
 	})
 
-	// 🔒 Protected route
+	//  Protected route
 	r.GET("/protected", middleware.AuthMiddleware(), func(c *gin.Context) {
 		email := c.MustGet("email").(string)
 		c.JSON(200, gin.H{
