@@ -13,6 +13,7 @@ func AuthRoutes(router *gin.Engine) {
 		auth.POST("/login", controllers.Login)
 		auth.GET("/myprofile", middleware.AuthMiddleware(), controllers.MyProfile)
 		auth.PUT("/myprofile", middleware.AuthMiddleware(), controllers.UpdateMyProfile)
+		//test 1
 		auth.GET("/match", middleware.AuthMiddleware(), controllers.MatchUsers)
 		auth.POST("/send-request", middleware.AuthMiddleware(), controllers.SendSkillRequest)
 		auth.POST("/respond-request", middleware.AuthMiddleware(), controllers.RespondToSkillRequest)
