@@ -1,6 +1,7 @@
 package main
 
 import (
+	// "fmt"
 	"github.com/gin-gonic/gin"
 	"temp/config"
 	"temp/middleware"
@@ -10,7 +11,9 @@ import (
 )
 
 func main() {
+	// fmt.Println("Calling ConnectDB()...") // Add this
 	config.ConnectDB()
+	// fmt.Println("Returned from ConnectDB()")
 	r := gin.Default()
 	r.Use(cors.Default())
 	// Public route
